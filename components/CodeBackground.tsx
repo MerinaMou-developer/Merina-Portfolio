@@ -55,7 +55,7 @@ export default function CodeBackground() {
         this.y = Math.random() * canvasHeight;
         this.radius = Math.random() * 2 + 0.5;
         this.speed = Math.random() * 0.5 + 0.2;
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.opacity = Math.random() * 0.4 + 0.3; // Increased opacity
       }
 
       update(canvasWidth: number, canvasHeight: number) {
@@ -109,8 +109,8 @@ export default function CodeBackground() {
         this.x = Math.random() * canvasWidth;
         this.y = canvasHeight + 20;
         this.text = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-        this.fontSize = Math.random() * 4 + 10;
-        this.opacity = Math.random() * 0.3 + 0.1;
+        this.fontSize = Math.random() * 4 + 12; // Slightly larger font
+        this.opacity = Math.random() * 0.4 + 0.2; // Increased opacity
         this.speed = Math.random() * 0.5 + 0.3;
         this.rotation = (Math.random() - 0.5) * 0.2;
       }
@@ -139,15 +139,15 @@ export default function CodeBackground() {
       }
     }
 
-    // Create particles
+    // Create particles - slightly reduced count for performance
     const particles: Particle[] = [];
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 40; i++) {
       particles.push(new Particle(themeColor, canvas.width, canvas.height));
     }
 
     // Create code lines
     const codeLines: CodeLine[] = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 12; i++) {
       codeLines.push(new CodeLine(themeColor, canvas.width, canvas.height));
     }
 
