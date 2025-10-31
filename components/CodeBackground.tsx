@@ -49,22 +49,20 @@ export default function CodeBackground() {
       radius: number;
       speed: number;
       opacity: number;
-      color: string;
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+      constructor(private color: string, private canvasWidth: number, private canvasHeight: number) {
+        this.x = Math.random() * canvasWidth;
+        this.y = Math.random() * canvasHeight;
         this.radius = Math.random() * 2 + 0.5;
         this.speed = Math.random() * 0.5 + 0.2;
         this.opacity = Math.random() * 0.5 + 0.2;
-        this.color = themeColor;
       }
 
-      update() {
+      update(canvasWidth: number, canvasHeight: number) {
         this.y -= this.speed;
         if (this.y < -this.radius) {
-          this.y = canvas.height + this.radius;
-          this.x = Math.random() * canvas.width;
+          this.y = canvasHeight + this.radius;
+          this.x = Math.random() * canvasWidth;
         }
       }
 
@@ -89,7 +87,7 @@ export default function CodeBackground() {
       speed: number;
       rotation: number;
 
-      constructor() {
+      constructor(private color: string, private canvasWidth: number, private canvasHeight: number) {
         const codeSnippets = [
           'const portfolio = new Portfolio();',
           'function build() { return success; }',
@@ -108,8 +106,8 @@ export default function CodeBackground() {
           'class Problem extends Solution { }',
         ];
 
-        this.x = Math.random() * canvas.width;
-        this.y = canvas.height + 20;
+        this.x = Math.random() * canvasWidth;
+        this.y = canvasHeight + 20;
         this.text = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
         this.fontSize = Math.random() * 4 + 10;
         this.opacity = Math.random() * 0.3 + 0.1;
@@ -117,13 +115,13 @@ export default function CodeBackground() {
         this.rotation = (Math.random() - 0.5) * 0.2;
       }
 
-      update() {
+      update(canvasWidth: number, canvasHeight: number) {
         this.y -= this.speed;
         this.x += Math.sin(this.rotation * 0.1) * 0.5;
         
         if (this.y < -50) {
-          this.y = canvas.height + 20;
-          this.x = Math.random() * canvas.width;
+          this.y = canvasHeight + 20;
+          this.x = Math.random() * canvasWidth;
         }
       }
 
@@ -133,7 +131,7 @@ export default function CodeBackground() {
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
         ctx.font = `${this.fontSize}px monospace`;
-        ctx.fillStyle = themeColor;
+        ctx.fillStyle = this.color;
         ctx.globalAlpha = this.opacity;
         ctx.textAlign = 'center';
         ctx.fillText(this.text, 0, 0);
@@ -144,13 +142,13 @@ export default function CodeBackground() {
     // Create particles
     const particles: Particle[] = [];
     for (let i = 0; i < 50; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(themeColor, canvas.width, canvas.height));
     }
 
     // Create code lines
     const codeLines: CodeLine[] = [];
     for (let i = 0; i < 15; i++) {
-      codeLines.push(new CodeLine());
+      codeLines.push(new CodeLine(themeColor, canvas.width, canvas.height));
     }
 
     // Animation loop
@@ -160,13 +158,13 @@ export default function CodeBackground() {
 
       // Update and draw particles
       particles.forEach((particle) => {
-        particle.update();
+        particle.update(canvas.width, canvas.height);
         particle.draw();
       });
 
       // Update and draw code lines
       codeLines.forEach((line) => {
-        line.update();
+        line.update(canvas.width, canvas.height);
         line.draw();
       });
 
