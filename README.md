@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sohag Hossain - Portfolio Website
 
-## Getting Started
+A modern, beautiful, and fully responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion. This portfolio showcases my work as a Python/Django Backend Developer.
 
-First, run the development server:
+## 🚀 Features
 
+- **Dark/Light Mode Toggle** - Smooth theme switching with persistent storage
+- **Modern UI/UX** - Beautiful gradients, animations, and responsive design
+- **Smooth Animations** - Powered by Framer Motion for engaging interactions
+- **Fully Responsive** - Looks great on all devices (mobile, tablet, desktop)
+- **Performance Optimized** - Built with Next.js for fast loading times
+- **SEO Friendly** - Proper metadata and semantic HTML
+
+## 📋 Sections
+
+1. **Hero Section** - Introduction with avatar, name, role, and social links
+2. **Featured Projects** - Showcase of best projects with tech stacks and features
+3. **Skills** - Categorized technical skills with beautiful badges
+4. **Experience** - Professional work history with achievements
+5. **Education & Certifications** - Academic background and certifications
+6. **Contact** - Contact form and social media links
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16 (React 19)
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Language:** TypeScript
+- **Fonts:** Geist Sans & Geist Mono
+
+## 🏃 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Hero Section** - Edit `components/sections/Hero.tsx`
+   - Update name, role, and tagline
+   - Modify social links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Projects** - Edit `components/sections/FeaturedProjects.tsx`
+   - Update project details in the `projects` array
+   - Add/remove projects as needed
 
-## Deploy on Vercel
+3. **Skills** - Edit `components/sections/Skills.tsx`
+   - Modify skill categories and technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Experience** - Edit `components/sections/Experience.tsx`
+   - Update work history in the `experiences` array
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Education** - Edit `components/sections/Education.tsx`
+   - Update educational background and certifications
+
+6. **Contact** - Edit `components/sections/Contact.tsx`
+   - Update email and social media links
+
+### Theme Colors
+
+Edit `app/globals.css` to customize the color scheme:
+- Purple accent: `#9333ea` (purple-600)
+- Blue accent: `#2563eb` (blue-600)
+- Pink accent: `#db2777` (pink-600)
+
+### Metadata
+
+Update site metadata in `app/layout.tsx`:
+- Title
+- Description
+- SEO tags
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 🌐 Deployment
+
+This project can be deployed on any platform that supports Next.js:
+
+- **Vercel** (Recommended) - [vercel.com](https://vercel.com)
+- **Netlify** - [netlify.com](https://netlify.com)
+- **Railway** - [railway.app](https://railway.app)
+- **AWS Amplify** - [aws.amazon.com/amplify](https://aws.amazon.com/amplify)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Sohag Hossain**
+- Email: Sohaghossain100@gmail.com
+- LinkedIn: [linkedin.com/in/sohaghossain](https://linkedin.com/in/sohaghossain)
+- GitHub: [github.com/sohaghossain](https://github.com/sohaghossain)
+
+## 🙏 Acknowledgments
+
+- Design inspiration from modern portfolio templates
+- Icons by [Lucide](https://lucide.dev)
+- Fonts by [Vercel](https://vercel.com)
+
+## 📸 Screenshots
+
+### Dark Mode
+![Dark Mode Preview](dark-preview.png)
+
+### Light Mode
+![Light Mode Preview](light-preview.png)
+
+---
+
+Made with ❤️ using Next.js and Tailwind CSS
