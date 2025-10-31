@@ -13,7 +13,6 @@ A modern, beautiful, and fully responsive portfolio website built with Next.js, 
 - **Typing Animation** - Beautiful typing effect for name and role
 - **Floating Social Sidebar** - Always visible social media links
 - **Interactive Cards** - Glassmorphic design with hover effects
-- **Animated Coding Background** - Canvas-based particles and floating code snippets
 
 ## 📋 Sections
 

@@ -134,7 +134,7 @@ export default function Hero() {
         {/* Tagline */}
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: roleDisplay === fullRole ? 1 : 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto italic"
         >
@@ -144,7 +144,7 @@ export default function Hero() {
         {/* Social Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: roleDisplay === fullRole ? 1 : 0, y: roleDisplay === fullRole ? 0 : 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
           className="flex flex-wrap justify-center gap-4"
         >
@@ -157,7 +157,7 @@ export default function Hero() {
                 target={link.icon === Mail ? '_self' : '_blank'}
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0 }}
-                animate={roleDisplay === fullRole ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.9 + index * 0.1 }}
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}
@@ -174,7 +174,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: roleDisplay === fullRole ? 1 : 0 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
