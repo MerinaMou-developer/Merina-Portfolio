@@ -42,8 +42,8 @@ const projects: Project[] = [
   {
     name: 'HungryTiger Backend',
     tagline: 'Food Delivery & Restaurant Platform',
-    description: 'Scalable production backend powering customer apps, restaurant OMS, and rider apps. Multi-gateway payments, Lark integration, and Groupon-style promotions.',
-    techStack: ['Python', 'Django', 'DRF', 'PostgreSQL', 'Celery', 'Redis'],
+    description: 'Scalable production backend powering customer apps, restaurant OMS, and rider apps. Deployed on Digital Ocean. Multi-gateway payments, Map API for tracking, Lark API for invoicing, and Groupon-style promotions.',
+    techStack: ['Python', 'Django', 'DRF', 'PostgreSQL', 'Celery', 'Redis', 'Digital Ocean'],
     badges: ['Team Project', 'Production'],
     slides: [
       { type: 'image', src: '/projects/1.jpeg', alt: 'Customer App' },
@@ -54,11 +54,13 @@ const projects: Project[] = [
       { type: 'image', src: '/projects/6.jpeg', alt: 'Lark Reports' },
     ],
     features: [
+      'Deployed on Digital Ocean server for production scalability',
       'Built REST APIs for Customer App, OMS, and Rider App with real-time order tracking',
+      'Integrated Map API for delivery tracking and location-based features',
       'Implemented multi-gateway payments: Cash, bKash, SSLCommerz, Stripe, Wallet',
       'Designed billing & payout logic: commissions, BOGO splits, vouchers, promotional discounts',
-      'Lark API integration for various modules (orders, finances, notifications)',
-      'Automated report generation and data exports (Excel/PDF)',
+      'Lark API integration for automated invoice generation, reports, and notifications',
+      'Automated report generation and data exports (Excel/PDF) via Lark',
       'Data synchronization across platforms via Lark webhooks',
       'Customizable workflow automation for invoicing and settlements',
       'Delivered Groupon-like features: BOGO deals, voucher stacking, contract pricing',
