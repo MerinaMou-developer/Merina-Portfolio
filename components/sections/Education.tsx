@@ -52,23 +52,11 @@ export default function Education() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                        B.Sc. in Computer Science
+                        B.Sc. in Computer Science Engineering
                       </h4>
                       <p className="text-purple-400 dark:text-purple-400 font-medium">
-                        University of Dhaka
+                        North Western University, Khulna
                       </p>
-                  <p className="text-gray-600 dark:text-gray-400">2016 - 2020</p>
-                </div>
-                <div className="pt-4 border-t border-gray-200 dark:border-indigo-900/50">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="w-4 h-4 text-yellow-500" />
-                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Dean's List
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Outstanding academic performance
-                  </p>
                 </div>
               </div>
             </div>
@@ -98,27 +86,22 @@ export default function Education() {
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    Python for Everybody
+                    Phitron — Programming & Backend Development
                   </h4>
-                  <p className="text-pink-400 dark:text-pink-400 font-medium">
-                    Coursera
+                  <p className="text-pink-400 dark:text-pink-400 font-medium mb-2">
+                    Phitron
                   </p>
-                </div>
-                <div className="pt-2">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    AWS Fundamentals
-                  </h4>
-                  <p className="text-pink-400 dark:text-pink-400 font-medium">
-                    AWS
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    C++, Data Structure, Algorithm, Python, Database, Backend Development
                   </p>
-                </div>
-                <div className="pt-2">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    Django for Backend Development
-                  </h4>
-                  <p className="text-pink-400 dark:text-pink-400 font-medium">
-                    Udemy
-                  </p>
+                  <a
+                    href="https://phitron.io/verification?validationNumber=PHBATCH3614091031104"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-purple-400 dark:text-purple-400 hover:text-purple-300 font-medium text-sm"
+                  >
+                    View Certificate →
+                  </a>
                 </div>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function Footer() {
     {
       title: 'Resources',
       items: [
-        { label: 'Resume (PDF)', href: '/resume.pdf', icon: FileText },
+        { label: 'Resume (PDF)', href: '/Resume.pdf', icon: FileText, newTab: true },
         { label: 'Email', href: 'mailto:merinamou3@gmail.com', icon: Mail },
       ],
     },
@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
             <div className="flex gap-3">
               <a
-                href="mailto:merinamou3@gmail.com"
+                href="#contact"
                 className="rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600
                            px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all
                            hover:scale-[1.03] hover:shadow-purple-500/40"
@@ -76,6 +76,8 @@ export default function Footer() {
               </a>
               <a
                 href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-purple-300 dark:border-white/15 bg-white/80 dark:bg-white/5 px-5 py-2 text-sm font-semibold
                            text-gray-900 dark:text-white backdrop-blur transition-all hover:border-purple-400/40 dark:hover:border-purple-400/40"
               >
@@ -116,6 +118,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <a
                       href={item.href}
+                      {...('newTab' in item && item.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="group inline-flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 transition hover:text-purple-600 dark:hover:text-white"
                     >
                       {'icon' in item && item.icon ? (

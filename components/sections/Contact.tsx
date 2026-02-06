@@ -12,16 +12,31 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! I\'ll get back to you soon.');
+    setSubmitStatus('idle');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to send');
+      }
+      setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
+    } catch {
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const socialLinks = [
@@ -116,6 +131,16 @@ export default function Contact() {
                   />
                 </div>
 
+                {submitStatus === 'success' && (
+                  <p className="text-green-600 dark:text-green-400 text-sm font-medium">
+                    Thank you! Your message was sent. I&apos;ll get back to you soon.
+                  </p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-red-600 dark:text-red-400 text-sm font-medium">
+                    Failed to send. Please try again or email me directly.
+                  </p>
+                )}
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}

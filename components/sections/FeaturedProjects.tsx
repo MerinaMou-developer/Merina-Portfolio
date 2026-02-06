@@ -66,16 +66,15 @@ const projects: Project[] = [
       'Handled delivery vs pick-up settlements, refunds, cancellations, and reconciliation',
     ],
     links: [
-      { label: 'Source', url: '#', icon: 'github' },
-      { label: 'Website', url: '#', icon: 'globe' },
-      { label: 'App', url: '#', icon: 'smartphone' },
+      { label: 'Website', url: 'https://www.hungry-tiger.com/', icon: 'globe' },
+      { label: 'App', url: 'https://play.google.com/store/apps/details?id=com.chatchefs.mealmingle', icon: 'smartphone' },
     ],
   },
   {
     name: 'Electrovix',
     tagline: 'Full-Stack E-Commerce Platform',
     description: 'Production e-commerce platform with role-based access, JWT auth, and complete order flow. Deployed with Docker and CI/CD via GitHub Actions.',
-    techStack: ['Django REST Framework', 'PostgreSQL', 'Docker', 'GitHub Actions'],
+    techStack: ['React', 'Tailwind CSS', 'Django REST Framework', 'PostgreSQL', 'Docker', 'GitHub Actions'],
     badges: ['Live', 'Full-Stack'],
     slides: [
       { type: 'image', src: '/projects/e1.png', alt: 'Customer App' },
@@ -98,9 +97,35 @@ const projects: Project[] = [
       'RESTful API design for scalable frontend integration',
     ],
     links: [
-      { label: 'Live', url: '#', icon: 'globe' },
-      { label: 'Backend', url: '#', icon: 'server' },
-      { label: 'Frontend', url: '#', icon: 'code' },
+      { label: 'Live', url: 'https://electrovix.vercel.app/', icon: 'globe' },
+      { label: 'Backend', url: 'https://github.com/MerinaMou-developer/Electrovix-backend', icon: 'server' },
+      { label: 'Frontend', url: 'https://github.com/MerinaMou-developer/Electrovix-frontend', icon: 'code' },
+    ],
+  },
+  {
+    name: 'PrintPro Dubai',
+    tagline: 'Premium Printing & Signage Solutions in Dubai',
+    description: 'Modern Next.js website for stamps, printing, and signage services in Dubai. Fast, responsive, and SEO-optimized.',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    badges: ['Live'],
+    slides: [
+      { type: 'image', src: '/projects/1p.png', alt: 'Customer App' },
+      { type: 'image', src: '/projects/2p.png', alt: 'Order Management' },
+      { type: 'image', src: '/projects/e3.png', alt: 'Payment Integration' },
+      { type: 'image', src: '/projects/3p.png', alt: 'Lark Reports' },
+      { type: 'image', src: '/projects/4p.png', alt: 'Lark Reports' },
+     
+    ],
+    features: [
+      'Built with Next.js and TypeScript for type-safe, performant frontend',
+      'Tailwind CSS for responsive design and consistent styling',
+      'Modern UI with smooth animations and professional layout',
+      'SEO-optimized for better discoverability in search engines',
+      'Fast page loads and excellent user experience',
+    ],
+    links: [
+      { label: 'Live', url: 'https://www.stamps-primeprint.com/', icon: 'globe' },
+      { label: 'Frontend', url: 'https://github.com/MerinaMou-developer/Printing-Site', icon: 'code' },
     ],
   },
 ];

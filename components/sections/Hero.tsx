@@ -50,10 +50,10 @@ export default function Hero() {
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/MerinaMou-developer', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/merina-rahaman-mou/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:merinamou3@gmail.com', label: 'Email' },
-    { icon: FileText, href: '/resume.pdf', label: 'Resume' },
+    { icon: Github, href: 'https://github.com/MerinaMou-developer', label: 'GitHub', newTab: true },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/merina-rahaman-mou/', label: 'LinkedIn', newTab: true },
+    { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=merinamou3@gmail.com', label: 'Email', newTab: true },
+    { icon: FileText, href: '/resume.pdf', label: 'Resume', newTab: true },
   ];
 
   return (
@@ -154,8 +154,8 @@ export default function Hero() {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target={link.icon === Mail ? '_self' : '_blank'}
-                rel="noopener noreferrer"
+                target={link.newTab ? '_blank' : '_self'}
+                rel={link.newTab ? 'noopener noreferrer' : undefined}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.9 + index * 0.1 }}
