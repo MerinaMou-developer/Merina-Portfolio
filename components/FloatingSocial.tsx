@@ -18,7 +18,7 @@ export default function FloatingSocial() {
     { icon: Linkedin, href: 'https://www.linkedin.com/in/merina-rahaman-mou/', label: 'LinkedIn' },
     { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=merinamou3@gmail.com', label: 'Email' },
     { icon: WhatsAppIcon, href: 'https://wa.me/8801721459929', label: 'WhatsApp' },
-    { icon: FileText, href: '/resume.pdf', label: 'Resume' },
+    { icon: FileText, href: '/Resume.pdf', label: 'Resume' },
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);

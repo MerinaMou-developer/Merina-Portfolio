@@ -75,7 +75,7 @@ export default function Footer() {
                 Contact Me
               </a>
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-purple-300 dark:border-white/15 bg-white/80 dark:bg-white/5 px-5 py-2 text-sm font-semibold

@@ -53,7 +53,7 @@ export default function Hero() {
     { icon: Github, href: 'https://github.com/MerinaMou-developer', label: 'GitHub', newTab: true },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/merina-rahaman-mou/', label: 'LinkedIn', newTab: true },
     { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=merinamou3@gmail.com', label: 'Email', newTab: true },
-    { icon: FileText, href: '/resume.pdf', label: 'Resume', newTab: true },
+    { icon: FileText, href: '/Resume.pdf', label: 'Resume', newTab: true },
   ];
 
   return (
